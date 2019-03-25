@@ -62,7 +62,7 @@ export default {
     tabRemove(targetName){
       console.log("tabRemove",targetName);
       //首页不删
-      if(targetName == '/'){
+      if(targetName == '/'||targetName == '/main'){
         return
       }
       this.$store.commit('delete_tabs', targetName);
