@@ -6,10 +6,16 @@ import page1 from './views/page1.vue'
 import page2 from './views/page2.vue'
 import page3 from './views/page3.vue'
 import page4 from './views/page4.vue'
+import login from './views/Login'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/login',
+      component:login,
+      name:'login'
+    },
     { path: '/', 
       component: Home,
       redirect: 'main',

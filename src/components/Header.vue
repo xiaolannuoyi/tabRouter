@@ -1,13 +1,21 @@
 <template>
     <div class="header">
-        <h1>Tab 路由管理</h1>
+        <h1>Tab 路由管理 
+            <el-button @click='logout'>退出登录</el-button>
+        </h1>
     </div>
 </template>
 
 <script>
 export default {
-    name:'navTop'
-
+    name:'navTop',
+    methods:{
+        logout(){
+            this.$store.state.openTab = [];
+            this.$store.state.activeIndex = '/main';
+            this.$router.push('/login')
+        }
+    }
 }
 </script>
 
